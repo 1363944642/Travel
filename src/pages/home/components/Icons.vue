@@ -100,14 +100,15 @@ export default {
 .icons
   overflow: hidden
   height: 0
-  padding-bottom: 50%
+  padding-bottom: 40%
+  margin-top: .1rem
   .icon
     position: relative
     overflow: hidden
     float: left
     width: 25%
     height: 0
-    padding-bottom: 25%
+    padding-bottom: 20%
     .icon-img
       position: absolute
       top: 0
