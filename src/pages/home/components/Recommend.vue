@@ -2,11 +2,7 @@
   <div>
     <div class="title">热销推荐</div>
     <ul>
-      <li
-        class="item border-bottom"
-        v-for="item of recommendList"
-        :key="item.id"
-      >
+      <li class="item border-bottom" v-for="item of list" :key="item.id">
         <img class="item-img" :src="item.imgUrl" alt="" />
         <div class="item-info">
           <p class="item-title">{{ item.title }}</p>
@@ -23,35 +19,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data() {
-    return {
-      recommendList: [
-        {
-          id: '0001',
-          imgUrl:
-            'https://imgs.qunarzz.com/p/p66/201304/17/384810d022dd28f793835fbb.jpg_256x160_6a7ec251.jpg',
-          title: '三亚',
-          desc:
-            '钜惠三亚四钻五日游 双岛假期 亚龙湾 玫瑰谷 蜈支洲 西岛南山 天涯海角'
-        },
-        {
-          id: '0002',
-          imgUrl:
-            'https://imgs.qunarzz.com/p/p66/201304/17/384810d022dd28f793835fbb.jpg_256x160_6a7ec251.jpg',
-          title: '三亚',
-          desc:
-            '钜惠三亚四钻五日游 双岛假期 亚龙湾 玫瑰谷 蜈支洲 西岛南山 天涯海角'
-        },
-        {
-          id: '0003',
-          imgUrl:
-            'https://imgs.qunarzz.com/p/p66/201304/17/384810d022dd28f793835fbb.jpg_256x160_6a7ec251.jpg',
-          title: '三亚',
-          desc:
-            '钜惠三亚四钻五日游 双岛假期 亚龙湾 玫瑰谷 蜈支洲 西岛南山 天涯海角'
-        }
-      ]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
