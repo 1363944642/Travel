@@ -17,4 +17,10 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+body {
+  min-width: 320px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+</style>

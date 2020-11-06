@@ -47,9 +47,9 @@ export default {
 .wrapper
   overflow: hidden
   width: 100%
-  // height: 31.25vw
-  height: 0
-  padding-bottom: 31.25%
+  height: 31.25vw
+  // height: 0
+  // padding-bottom: 31.25%
   background: #cccccc
   .swiper-img
     width: 100%
