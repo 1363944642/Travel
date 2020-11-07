@@ -44,7 +44,7 @@ export default {
   mounted() {
     setTimeout(() => {
       this.scroll = new Bscroll(this.$refs.wrapper, {})
-    }, 30)
+    }, 500)
   }
 }
 </script>
