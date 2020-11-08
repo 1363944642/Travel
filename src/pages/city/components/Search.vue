@@ -40,9 +40,12 @@ export default {
       hasNoData: false
     }
   },
-
   watch: {
     keyword() {
+      if (this.scroll) {
+        this.scroll.scrollTo(0, 0)
+      }
+
       if (this.timer) {
         clearTimeout(this.timer)
       }
