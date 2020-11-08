@@ -36,14 +36,11 @@ export default {
     return {
       keyword: '',
       list: [],
-      timer: null
+      timer: null,
+      hasNoData: false
     }
   },
-  computed: {
-    hasNoData() {
-      return !this.list.length
-    }
-  },
+
   watch: {
     keyword() {
       if (this.timer) {
@@ -54,6 +51,7 @@ export default {
         return
       }
       this.timer = setTimeout(() => {
+        this.hasNoData = false
         const result = []
         for (let i in this.cities) {
           this.cities[i].forEach(value => {
@@ -66,7 +64,10 @@ export default {
           })
         }
         this.list = result
-      }, 100)
+        if (!this.list.length) {
+          this.hasNoData = true
+        }
+      }, 10)
     }
   },
   updated() {
