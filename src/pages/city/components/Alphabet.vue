@@ -84,6 +84,7 @@ export default {
   bottom: 0
   width: .4rem
   .item
+    overflow:hidden
     line-height: .4rem
     color: $bgColor
 </style>
