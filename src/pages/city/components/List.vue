@@ -64,6 +64,12 @@ export default {
   updated() {
     this.scroll = new Bscroll(this.$refs.wrapper, {})
   },
+  deactivated() {
+    this.scroll.scrollTo(0, 0)
+  },
+  activated() {
+    this.scroll = new Bscroll(this.$refs.wrapper, {})
+  },
   watch: {
     letter() {
       if (this.letter) {

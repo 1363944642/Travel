@@ -82,6 +82,9 @@ export default {
       }, 10)
     }
   },
+  deactivated() {
+    this.keyword = ''
+  },
   updated() {
     this.scroll = new Bscroll(this.$refs.search)
   }
