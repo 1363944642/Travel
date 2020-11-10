@@ -1,7 +1,7 @@
 <template>
   <div>
     <home-header></home-header>
-    <home-swiper :list="swiperList"></home-swiper>
+    <home-swiper :list="swiperList" :city="this.city"></home-swiper>
     <home-icons :list="iconList"></home-icons>
     <home-recommend :list="recommendList"></home-recommend>
     <home-weekend :list="weekendList"></home-weekend>
