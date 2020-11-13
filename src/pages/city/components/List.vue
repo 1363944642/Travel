@@ -62,13 +62,19 @@ export default {
     ...mapMutations(['changeCity'])
   },
   updated() {
-    this.scroll = new Bscroll(this.$refs.wrapper, {})
+    this.scroll = new Bscroll(this.$refs.wrapper, {
+      click: true,
+      taps: true
+    })
   },
   deactivated() {
     this.scroll.scrollTo(0, 0)
   },
   activated() {
-    this.scroll = new Bscroll(this.$refs.wrapper, {})
+    this.scroll = new Bscroll(this.$refs.wrapper, {
+      click: true,
+      taps: true
+    })
   },
   watch: {
     letter() {
